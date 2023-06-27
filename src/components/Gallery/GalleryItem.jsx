@@ -1,9 +1,19 @@
 import { useState } from "react";
 
-const GalleryItem = ({ itemData }) => {
+const GalleryItem = ({ itemData, getGallery }) => {
   const { id, path, description, likes } = itemData;
-  console.log(path);
   const [showDescription, setShowDescription] = useState(false);
+
+  const addLike = () => {
+    fetch(`/gallery/like/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then(getGallery())
+      .catch((err) => console.error(err));
+  };
 
   return (
     <div>
@@ -16,7 +26,7 @@ const GalleryItem = ({ itemData }) => {
         {showDescription && <span>{description}</span>}
         {!showDescription && <img src={path} />}
       </div>
-      <button>like</button>
+      <button onClick={addLike}>like</button>
       <span>{likes}</span>
     </div>
   );

@@ -1,10 +1,14 @@
 import GalleryItem from "./GalleryItem";
 
-const GalleryList = ({ gallery }) => {
+const GalleryList = ({ gallery, getGallery }) => {
   return (
     <div className="gallery-list">
       {gallery.map((itemData) => (
-        <GalleryItem itemData={itemData} />
+        <GalleryItem
+          key={itemData.id}
+          itemData={itemData}
+          getGallery={getGallery}
+        />
       ))}
     </div>
   );
