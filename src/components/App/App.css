@@ -12,4 +12,14 @@
 .App-title {
   font-size: 1.5em;
 }
+.content-container {
+  height: 100px;
+  width: 100px;
+}
 
+.gallery-list {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  justify-content: center;
+}

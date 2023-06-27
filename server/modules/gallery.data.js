@@ -1,10 +1,4 @@
 const galleryItems = [
-  {
-    id: 1,
-    path: "images/goat_small.jpg",
-    description: "Photo of a goat taken at Glacier National Park.",
-    likes: 0,
-  },
   { id: 2, path: "images/1.jpg", description: "Girl Skateboarder", likes: 0 },
   { id: 3, path: "images/2.jpg", description: "Bowl Sesh", likes: 0 },
   { id: 4, path: "images/3.jpg", description: "Bowl at Sunset", likes: 0 },
